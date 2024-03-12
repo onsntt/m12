@@ -18,7 +18,7 @@ months[10] = 30;
 months[11] = 31;
 */
 int choice;
-
+std::cout << months;
 std::cin >> choice;
 
 if (choice >= 0 && choice <=11) {
