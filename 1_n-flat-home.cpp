@@ -1,4 +1,7 @@
 #include <iostream>
+
+//Zadacha 1
+
 int main ()  {
 std::cout << "Enter surnames: \n";
 std::string people[10];
