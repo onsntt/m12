@@ -38,7 +38,7 @@ for (int i = 0; i< 10; ) {
     std::getline(std::cin, people[i]);
 if (! surnameCorrect(people[i], whiteList)) 
 {
-    std::cout << "Incorrect input\n";
+    std::cout << "Incorrect input, try again!\n";
 }
     else i++;
 
