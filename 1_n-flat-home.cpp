@@ -1,12 +1,47 @@
 #include <iostream>
+#include <string>
 
 //Zadacha 1
 
+bool surnameCorrect(std::string inp, std::string whiteList)
+{
+
+    for (int i = 0; i < inp.length();)
+    {
+        bool equal = false;
+        for (int j = 0; j < whiteList.length();)
+        {
+            if (inp[i] == whiteList[j])
+            {
+                equal = true;
+                break;
+            }
+            else
+            {
+                j++;
+            }
+        }
+        if (equal == false)
+        {
+            return false;
+        }
+        i++;
+    }
+    return true;
+}
+
 int main ()  {
+std::string whiteList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. -";   
 std::cout << "Enter surnames: \n";
 std::string people[10];
-for (int i = 0; i< 10; i++) {
-    std::cin >>people[i];
+for (int i = 0; i< 10; ) {
+    std::getline(std::cin, people[i]);
+if (! surnameCorrect(people[i], whiteList)) 
+{
+    std::cout << "Incorrect input\n";
+}
+    else i++;
+
 }
 
 
